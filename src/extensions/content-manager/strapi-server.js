@@ -16,7 +16,11 @@ module.exports = (plugin) => {
       ctx.query.filters = {
         ...existing,
         // keep only attendance whose student.createdBy = this admin
-        student: { createdBy: userId },
+        student: {
+          createdBy: {
+            id: { $eq: userId },
+          },
+        },
       };
       // ensure the relation is populated so the dashboard can render links, etc.
       ctx.query.populate = { student: { populate: ["createdBy"] } };
