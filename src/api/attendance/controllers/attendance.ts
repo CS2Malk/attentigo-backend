@@ -14,8 +14,9 @@ export default factories.createCoreController(
         ctx.query.filters = {
           ...existingFilters,
           student: {
-            // if you’ve used Strapi’s built-in creator field:
-            createdBy: user.id,
+            createdBy: {
+              id: { $eq: ctx.state.user.id },
+            },
           },
         };
 
