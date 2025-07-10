@@ -1,6 +1,11 @@
 "use strict";
 
 module.exports = (plugin) => {
+  console.log(
+    "[CM EXT] loaded — controllers:",
+    Object.keys(plugin.controllers)
+  );
+
   // Grab the Content Manager controllers
   const cm = plugin.controllers["content-manager"];
 
