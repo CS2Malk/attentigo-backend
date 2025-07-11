@@ -25,9 +25,9 @@
       "unique": true
     },
     "Password": {
-      "type": "password",
-      "required": true,
-      "minLength": 8
+      "type": "string",
+      "minLength": 8,
+      "required": true
     },
     "school": {
       "type": "relation",
