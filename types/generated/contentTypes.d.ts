@@ -466,7 +466,7 @@ export interface ApiStudentStudent extends Struct.CollectionTypeSchema {
       'api::student.student'
     > &
       Schema.Attribute.Private;
-    Password: Schema.Attribute.Password &
+    Password: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         minLength: 8;
