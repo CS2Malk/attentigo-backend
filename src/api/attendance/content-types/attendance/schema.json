@@ -25,6 +25,10 @@
     },
     "Timestamp": {
       "type": "datetime"
+    },
+    "tardy": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

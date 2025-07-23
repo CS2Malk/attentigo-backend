@@ -397,6 +397,7 @@ export interface ApiAttendanceAttendance extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     student: Schema.Attribute.Relation<'manyToOne', 'api::student.student'>;
+    tardy: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     Timestamp: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -430,6 +431,7 @@ export interface ApiSchoolSchool extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
+    startTime: Schema.Attribute.Time & Schema.Attribute.Required;
     students: Schema.Attribute.Relation<'oneToMany', 'api::student.student'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

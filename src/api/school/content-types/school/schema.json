@@ -29,6 +29,10 @@
       "relation": "oneToMany",
       "target": "api::student.student",
       "mappedBy": "school"
+    },
+    "startTime": {
+      "type": "time",
+      "required": true
     }
   }
 }
